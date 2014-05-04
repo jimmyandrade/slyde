@@ -1,5 +1,5 @@
 {
-  "name": "Slyde",
+  "name": "slyde",
   "version": "0.0.1",
   "authors": [
     "Paulo (Jimmy) Andrade <paulojimmyandrade@icloud.com>"
@@ -12,7 +12,7 @@
     "slides"
   ],
   "license": "MIT",
-  "homepage": "http://github.com/jimmyandrade/Slyde",
+  "homepage": "http://github.com/jimmyandrade/slyde",
   "ignore": [
     "**/.*",
     "node_modules",
