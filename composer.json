@@ -1,0 +1,27 @@
+{
+	"name": "jimmyandrade/Slyde",
+	"description": "A flexible WordPress plugin for slides management",
+	"version": "0.0.1",
+	"type": "wordpress-plugin",
+	"homepage": "http://github.com/jimmyandrade/Slyde",
+	"time": "2014-05-04 17:38:00",
+	"authors": [
+		{
+			"name": "Paulo H. Jimmy Andrade Mota C.",
+			"email": "contato@jimmyandrade.com",
+			"homepage": "http://developer.jimmyandrade.com/",
+			"role": "Developer"
+		}
+	],
+	"support": {
+		"email": "contato@jimmyandrade.com",
+		"source": "http://github.com/jimmyandrade/Slyde"
+	},
+	"autoload": {
+		"psr-0": { "jimmyandrade": "src/" }
+	},
+	"dist": {
+		"url": "https://github.com/jimmyandrade/Slyde/archive/master.zip",
+		"type": "zip"
+	}
+}

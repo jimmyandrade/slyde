@@ -1,0 +1,23 @@
+{
+  "name": "Slyde",
+  "version": "0.0.1",
+  "authors": [
+    "Paulo (Jimmy) Andrade <paulojimmyandrade@icloud.com>"
+  ],
+  "description": "A flexible WordPress plugin for slides management",
+  "main": "Slyde.php",
+  "keywords": [
+    "wordpress",
+    "plugin",
+    "slides"
+  ],
+  "license": "MIT",
+  "homepage": "http://github.com/jimmyandrade/Slyde",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
