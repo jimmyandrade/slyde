@@ -2,6 +2,8 @@
 
 namespace jimmyandrade;
 
+require_once 'Slider_Widget.php';
+
 /**
  * Slyde main class
  *
@@ -27,6 +29,7 @@ class Slyde {
 	 * Constructor
 	 */
 	private function __construct() {
+		
 		$labels = array(
 				'name' => __( 'Slides', 'slyde' ),
 				'singular_name' => __( 'Slides', 'slyde' ),
@@ -42,6 +45,12 @@ class Slyde {
 				'not_found' => __( 'No slides found', 'slyde' ),
 				'not_found_in_trash' => __( 'No slides found in Trash', 'slyde' ),
 				'parent_item_colon' => __( 'Parent Slide', 'slyde' ),
+		);
+		$rewrite = array(
+				'slug' => 'slides',
+				'with_front' => false,
+				'feeds' => false,
+				'pages' => false,
 		);
 		$args = array(
 				'label' => __( 'Slides', 'slyde' ),
@@ -60,15 +69,27 @@ class Slyde {
 				'hierarchical' => false,
 				'supports' => array( 'title', 'thumbnail', 'excerpt', 'revisions', 'page-attributes' ),
 				'has_archive' => false,
-				'rewrite' => array(
-						'slug' => 'slides',
-						'with_front' => false,
-						'feeds' => false,
-						'pages' => false,
-				),
+				# 'rewrite' => $rewrite,
+				'rewrite' => false, // set to false to prevent call to add_rewrite_tag on a non-object
 				'query_var' => false,
 				'can_export' => true,
 		);
 		register_post_type( 'slide', $args );
+		add_action( 'widgets_init', array( __CLASS__, 'widgets_init' ) );
 	}
+	
+	public static function widgets_init() {
+		Slider_Widget::register();
+	}
+	
+	public function admin_notices() {
+		if( !current_theme_supports( 'post-thumbnails' ) ) {
+		?>
+	<div class="error">
+		<p><strong><?php _e( 'Attention', 'slyde' ); ?></strong> <?php _e( 'You must enable post thumbnails support on your template, otherwise images won\'t be shown.' ); ?></p>
+	</div>
+	<?php
+		}
+	}
+	
 }
