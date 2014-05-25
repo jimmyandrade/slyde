@@ -9,5 +9,5 @@
  */
 use jimmyandrade\Slyde;
 use jimmyandrade\Slider_Widget;
-$loader = require 'vendor/autoload.php';
+$loader = require 'src\jimmyandrade\Slyde.php';
 Slyde::get_instance();
