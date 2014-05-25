@@ -2,7 +2,7 @@
 
 namespace jimmyandrade;
 
-require_once 'Slider_Widget.php';
+require_once 'Slider-Widget.php';
 
 /**
  * Slyde main class
@@ -83,7 +83,9 @@ class Slyde {
 	}
 	
 	public function admin_notices() {
-		if( !current_theme_supports( 'post-thumbnails' ) ) {
+		if ( current_theme_supports( 'post-thumbnails' ) ) {
+		}
+		else {
 		?>
 	<div class="error">
 		<p><strong><?php _e( 'Attention', 'slyde' ); ?></strong> <?php _e( 'You must enable post thumbnails support on your template, otherwise images won\'t be shown.' ); ?></p>

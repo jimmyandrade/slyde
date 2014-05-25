@@ -13,11 +13,10 @@ class Slider_Widget extends \WP_Widget {
 	 * Widget constructor
 	 */
 	public function __construct() {
-		parent::__construct(
-				'slider_widget',
-				__( 'Simple Slyde Slider', 'slyde'),
-				array( 'description' => __( 'Get all the "slide" posts and show the images', 'slyde') )
+		$construct_array = array(
+			'description' => __( 'Get all the "slide" posts and show the images', 'slyde' ),
 		);
+		parent::__construct( 'slider_widget', __( 'Simple Slyde Slider', 'slyde' ), $construct_array );
 		add_image_size( 'slide', 1024, 442, true );
 	}
 	
@@ -36,7 +35,7 @@ class Slider_Widget extends \WP_Widget {
 		);
 		$posts_array = get_posts( $args );
 		
-		if( count( $posts_array ) < 1 ) {
+		if ( count( $posts_array ) < 1 ) {
 ?><div id="no-posts-found"></div>
 <?php
 			return;
@@ -62,5 +61,3 @@ class Slider_Widget extends \WP_Widget {
 	} // end public function widget
 	
 } // end class Slider_Widget
-
-?>

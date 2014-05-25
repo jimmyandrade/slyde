@@ -3,7 +3,7 @@
  * Plugin Name: Slyde
  * Plugin URI: http://github.com/jimmyandrade/slyde
  * Description: A flexible WordPress plugin for slides management
- * Version: 1.0.2
+ * Version: 1.0.3
  * Author: Paulo H. Jimmy Andrade Mota C.
  * Author URI: http://github.com/jimmyandrade/
  */
