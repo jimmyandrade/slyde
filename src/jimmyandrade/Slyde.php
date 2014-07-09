@@ -2,6 +2,7 @@
 
 namespace jimmyandrade;
 
+require_once 'Bootstrap-Carousel-Widget.php';
 require_once 'Slider-Widget.php';
 
 /**
@@ -80,6 +81,7 @@ class Slyde {
 	
 	public static function widgets_init() {
 		Slider_Widget::register();
+		Bootstrap_Carousel_Widget::register();
 	}
 	
 	public function admin_notices() {

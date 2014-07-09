@@ -3,8 +3,9 @@
 namespace jimmyandrade;
 
 /**
+ * Simple Slyde Slider widget
  *
- * @author SetordeTI
+ * @author Paulo H. Jimmy Andrade Mota C. <paulojimmyandrade@icloud.com>
  *        
  */
 class Slider_Widget extends \WP_Widget {
