@@ -37,3 +37,4 @@ vendor/
 composer.lock
 
 *.zip
+*.patch
