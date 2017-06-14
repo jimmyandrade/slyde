@@ -9,5 +9,5 @@
  */
 use jimmyandrade\Slyde;
 use jimmyandrade\Slider_Widget;
-$loader = require ( plugin_dir_path( __FILE__ ) . 'src/jimmyandrade/Slyde.php' );
+$loader = require ( plugin_dir_path( __FILE__ ) . 'inc/class-slyde.php' );
 Slyde::get_instance();
