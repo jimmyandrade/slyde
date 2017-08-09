@@ -31,7 +31,12 @@ class Bootstrap_Carousel_Widget extends Slyde_Base_Widget {
 		if ( ! $the_query->have_posts() ) {
 			return;
 		}
-		$carousel_id = isset( $instance['carousel_id'] ) && ! empty( $instance['carousel_id'] ) ? $instance['carousel_id'] : 'carousel-example';
+		if(isset( $instance['carousel_id'] ) && ! empty( $instance['carousel_id'] )) {
+			$carousel_id =  $instance['carousel_id'];
+        }
+        else {
+		    $carousel_id = 'carousel-example';
+        }
 		?>
         <div id="<?php echo esc_attr( $carousel_id ); ?>" class="carousel slide" data-ride="carousel"
              data-interval="5000">
